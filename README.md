@@ -20,4 +20,13 @@ window.addEventListener('offline', function(e){console.log('offline')});
 + 在 `window`，`document`，或 `document.body` 上使用 `addEventListener`
 + 将 `document` 或 `document.body` 的 `ononline` 或 `onoffline` 属性设置为一个 JavaScript Function 对象。（注意：由于兼容性原因，不能使用 `window.ononline` 或 `window.onoffline`。）
 + 在 HTML 标记中的 `body` 标签上指定 ononline="..." 或 onoffline="..." 特性。
- 
+
+
+## 注意事项
+
++ IE8 中需要给 document.body 绑定事件而不是 window
++ 在线离线的变化指的是物理上的网络链接变化，如果是在控制台将网络限制为 offline 则不会触发相应的事件。
++ 兼容性
+    + IE: 8+
+    + Chrome: 14+
+    + Firefox: 3.5+
