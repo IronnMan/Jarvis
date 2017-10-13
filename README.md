@@ -7,3 +7,17 @@ if(navigator.onLine) { // true|false
 
 }
 ```
+
+## online 和 offline 事件
+
+当浏览器脱机或上线时，浏览器还支持 `online` 和 `offline` 事件。
+
+```javascript
+window.addEventListener('online', function(e){console.log('online')});
+window.addEventListener('offline', function(e){console.log('offline')});
+```
+你可以使用几种熟悉的方式来注册事件：
++ 在 `window`，`document`，或 `document.body` 上使用 `addEventListener`
++ 将 `document` 或 `document.body` 的 `ononline` 或 `onoffline` 属性设置为一个 JavaScript Function 对象。（注意：由于兼容性原因，不能使用 `window.ononline` 或 `window.onoffline`。）
++ 在 HTML 标记中的 `body` 标签上指定 ononline="..." 或 onoffline="..." 特性。
+ 
