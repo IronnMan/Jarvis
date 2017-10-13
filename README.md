@@ -30,3 +30,4 @@ window.addEventListener('offline', function(e){console.log('offline')});
     + IE: 8+
     + Chrome: 14+
     + Firefox: 3.5+
+    +
